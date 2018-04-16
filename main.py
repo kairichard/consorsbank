@@ -26,7 +26,11 @@ def get_amounts():
     return dict(total=driver.find_elements_by_css_selector("span.ev-amount ")[0].text.replace(".", "").replace(",", ".").replace(" EUR", ""))
 
 def main():
-    print(json.dumps(get_amounts()))
+    amounts = get_amounts()
+    if "baseline" in os.environ:
+        baseline = float(os.environ["baseline"]})
+        amounts["change"] = "{0:.2f}".format((100 * float(amounts["total"])/baseline) - 100)
+    print(json.dumps(amounts))
 
 if __name__ == "__main__":
     main()

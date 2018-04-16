@@ -7,8 +7,8 @@ This image lets you get the total balance of your account.
 In order to get the balance just run the following.
 
 ```bash
-> docker run -e username=<ACCOUNT_NUMBER> -e password=<ACCOUNT_PW> kairichard/consorsbank
-> {"total": "1234.56"}
+> docker run -e baseline=1000 -e username=<ACCOUNT_NUMBER> -e password=<ACCOUNT_PW> kairichard/consorsbank
+> {"total": "1234.56", "change": "23.45"}
 ```
 The output is in json for a better composabillity with other tools.
 
