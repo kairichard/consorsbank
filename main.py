@@ -27,8 +27,8 @@ def get_amounts():
 
 def main():
     amounts = get_amounts()
-    if "baseline" in os.environ:
-        baseline = float(os.environ["baseline"]})
+    if "baseline" in os.environ.keys():
+        baseline = float(os.environ["baseline"])
         amounts["change"] = "{0:.2f}".format((100 * float(amounts["total"])/baseline) - 100)
     print(json.dumps(amounts))
 
