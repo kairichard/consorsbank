@@ -24,12 +24,12 @@ def login():
     driver.find_element_by_id("password").send_keys(os.environ["password"])
     time.sleep(wait_in_secs)
     driver.find_element_by_id("login").click()
-    time.sleep(15)
+    time.sleep(wait_in_secs)
     return driver
 
 def get_total():
     driver = login()
-    time.sleep(15)
+    time.sleep(wait_in_secs)
     return dict(total=driver.find_elements_by_css_selector("span.ev-amount ")[0].text.replace(".", "").replace(",", ".").replace(" EUR", ""))
 
 def get_total_by_account(account):
