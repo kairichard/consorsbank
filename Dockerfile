@@ -1,6 +1,7 @@
 FROM joyzoursky/python-chromedriver
 
-RUN pip install selenium
+RUN pip install selenium==3.8.0
 ADD main.py main.py
 
-CMD python main.py
+ENTRYPOINT ["python", "main.py"]
+CMD [ "total" ]

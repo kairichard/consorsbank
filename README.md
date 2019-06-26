@@ -1,7 +1,7 @@
-# consorsbank - scrape your account page
+# consorsbank - account api
 You have and account with https://www.consorsbank.de/ and wanted to pull information from it.
 Until now you where out of luck. The wait is over.
-This image lets you get the total balance of your account.
+I found serveral rest-api endpoints in the application while browsing the interface.
 
 ## Usage
 In order to get the balance just run the following.
