@@ -1,3 +1,4 @@
+## ⚠️ This will no longer work as consorsbank introduced a secure MFA 
 # consorsbank - account api
 You have and account with https://www.consorsbank.de/ and wanted to pull information from it.
 Until now you where out of luck. The wait is over.
